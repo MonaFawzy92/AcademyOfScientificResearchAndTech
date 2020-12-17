@@ -1,0 +1,36 @@
+<div class="container" flex fxLayout='column' fxLayout.lt-sm="column">
+
+    <div class="genrateCod">
+        <div class="digitalCls">
+            <h2 class="digital-wallet">Digital Wallet</h2>
+            <p class="safe-payment-method">Safe payment method during COVID-19, by generating code you can use it
+                when
+                purchasing to be deducted from
+                your
+                salary .</p>
+        </div>
+
+        <p class="one-time-code-valid">one-time code valid for 1 hour</p>
+        <mat-label class="group-12 rectangle ">
+            {{code}}
+        </mat-label>
+        <br><br>
+        <div class="formCls">
+            <a class="codeBtn" (click)="generateOrderCode()">
+                <img src="assets/images/button.svg">
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- <div flex fxLayout='column' fxLayout.lt-sm="column" class="container">
+    <div style="text-align: start;">
+        <h2 class="digital-wallet">Digital Wallet</h2>
+        <p class="safe-payment-method">Safe payment method during COVID-19, by generating code you can use it
+            when
+            purchasing to be deducted from
+            your
+            salary .</p>
+    </div>
+
+</div> -->

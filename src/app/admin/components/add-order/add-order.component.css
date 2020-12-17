@@ -1,0 +1,233 @@
+.mainContainer
+{
+    background-color: #f9f9f9; 
+    margin: auto;
+    /* width: 90%; */
+    padding: 40px;
+}
+.addorder{
+    /* display: inline-block;    */
+    text-align: center;
+
+}
+
+.formCls{
+    width: 20%;
+    display: inline-block;
+}
+
+.save {
+    /* width: 100%;
+    height: 47px; */
+    border-radius: 11.6px;
+    background-color: #e60000;
+    font-family: inherit;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff;
+    height: 43px;
+    width: 117px;
+      border-radius: 3.33px;
+      /* background-color: #4A4D4E; */
+    
+}
+
+.close {
+  border-radius: 11.6px;
+  /* background-color: #e60000; */
+  font-family: inherit;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+  height: 43px;
+  width: 117px;
+    border-radius: 3.33px;
+    background-color: #4A4D4E;
+  
+}
+
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background-color: #e60000;
+}
+
+/* //////////////////////////////////// */
+.container{
+background-color: #f9f9f9; 
+margin: auto;
+width: 90%;
+padding-top: 40px;
+}
+
+.logoCls{
+    width: 20;
+    height: 20;
+}
+
+.orderInfo{
+    background-color: #F9F9F9;
+}
+
+.userInfo{
+
+}
+
+.new-order {
+    /* height: 17px;
+    width: 132px; */
+    color: #333333;
+    font-family: inherit;
+    font-size: 24.36px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 16.9px;
+  }
+
+  .newOrderTitle{
+      text-align: center;
+      padding: 2rem;
+  }
+
+
+
+  .formFields{
+      display: flex;
+  }
+
+  .formClass{
+      padding: 10px;
+  }
+
+  /* ///////////////////////////////////////// */
+  .lastCont{
+    margin: auto;
+    width: 90%;
+    padding-top: 45px;
+  }
+
+  .newOrderCls{
+   background-color: #F9F9F9;
+   padding: 40px;
+  }
+
+  .orderInformationCls{
+    background-color: white;
+    padding: 40px;
+  }
+
+  .orderTit{
+    /* width: 70%; */
+    margin: auto;
+    padding: 75px;
+  }
+
+  hr.new4 {
+    border: 1px solid #EBEBEB;
+    width: 100%;
+  }
+
+  .employee-information {
+    color: #333333;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 27px;
+  }
+
+  .formInput-Labels{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      padding: 20px;
+      padding-bottom: 0;
+  }
+
+  .email-address {
+    color: #333333;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 18px;
+    padding-bottom: 10px;
+  }
+
+  .sub-total {
+    color: #333333;
+    font-family: inherit;
+    font-size: 13.65px;
+    letter-spacing: 0;
+    line-height: 20px;
+    text-indent: 5px;
+  }
+
+  .allowanceSubtract{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mat-checkbox-layout .mat-checkbox-label {
+    line-height: 24px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.rect {
+    background-color: rgba(230,0,0,0.1);
+    outline: 7px groove rgba(230,0,0,0.1);
+    margin: 15px 0;
+}
+
+.total-copy-3 {
+  color: #333333;
+  font-family: initial;
+  font-size: 17.55px;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 26px;
+  text-indent: 5px;
+}
+
+.formInput-prices{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.visi{
+  visibility: hidden;
+}
+
+.boldLabl{
+  font-weight: bold;
+}
+
+.errorMessage {
+  /* text-align: center; */
+  padding: 1%;
+  /* margin-left: 72px; */
+  margin-top: 9px;
+  width: 80%;
+  min-height: 50px;
+  height: auto;
+  font-family: Avenir;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #a94442;
+}

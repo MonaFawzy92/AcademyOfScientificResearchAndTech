@@ -1,0 +1,74 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true" mode="side" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>
+            <img src="../../../assets/images/Group.png" class="">
+            <br />
+
+        </mat-toolbar>
+        <br><br>
+        <mat-label class="account">MAIN</mat-label>
+        <br><br>
+        <mat-nav-list flex fxlayout="column">
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/">
+                <!-- <img src="../../../assets/images/grey.png" class="icon-margin-left"> -->
+                <mat-icon matListIcon>home</mat-icon>
+                Home
+            </a>
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/code">
+                <img src="../../../assets/images/grey.png" class="icon-margin-left">
+                Code Generator
+            </a>
+
+            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/list">
+                <img src="../../../assets/images/grey.png" class="icon-margin-left">
+                Payment History
+            </a>
+
+            <div fxLayout="column" class="emp-data-container">
+                <mat-label class="account">Account</mat-label>
+                <!-- <a routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/code">
+                    Home
+                </a> -->
+                <a mat-flat-button routerLink="/list">Account</a>
+                <a mat-flat-button>Log Out</a>
+            </div>
+        </mat-nav-list>
+    </mat-sidenav>
+
+
+    <mat-sidenav-content>
+
+
+        <mat-toolbar color="primary" class="toolbar-Info">
+            <!-- <img src="../../../assets/images/Group.png" class=""> -->
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+                *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+
+            <div class="userProfile">
+                <div class="notification">
+                    <!-- [matMenuTriggerFor]="menu"  -->
+                    <button mat-icon-button>
+                        <i class="material-icons"> notification_important</i>
+                        <span class="badge badge-secondary">4</span>
+
+                    </button>
+                    <!-- <mat-menu #menu="matMenu">
+
+                        <button mat-menu-item *ngFor="let notif of notificationMiddleware.notifications">
+                            <span>
+                                item
+                            </span>
+                        </button>
+                    </mat-menu> -->
+                </div>
+                <mat-label class="account">Welcome, Ahmed</mat-label>
+                <img src="../../../assets/images/user.svg" class="">
+            </div>
+            <!-- <a href="#">Logout</a> -->
+        </mat-toolbar>
+
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

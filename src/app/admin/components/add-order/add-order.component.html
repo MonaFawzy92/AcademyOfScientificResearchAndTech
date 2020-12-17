@@ -1,0 +1,142 @@
+<!-- <div class="mainContainer">
+
+    <div flex fxLayout='column addorder' fxLayout.lt-sm="column">
+        <h2 class="loginTitle">Add Order</h2>
+
+        <form class="formCls" [formGroup]="createOrderFormGroup">
+            <div flex fxLayout='column' fxLayout.lt-sm="column">
+                <mat-label>Employee Code</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput (keyup)="getemployeeData($event.target.value)" maxlength="5" formControlName="code"
+                        placeholder="code">
+                </mat-form-field>
+
+                <mat-label>Employee Staff-ID</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="staffId" [(ngModel)]='userModel.staffId' placeholder="Staff Id">
+                </mat-form-field>
+
+                <mat-label>Employee Email</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput formControlName="email" [(ngModel)]='userModel.email' name="email"
+                        placeholder="email">
+                </mat-form-field>
+
+                <mat-label>Select from this menu:</mat-label>
+                <mat-form-field appearance="outline" class="ddl">
+                    <mat-select formControlName="item" placeholder="Select an item">
+                        <mat-option *ngFor="let item of menuItems" [value]="item">
+                            {{item}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-checkbox class="example-margin" formControlName="isAllowance">Use allowance</mat-checkbox>
+                <br><br>
+            </div>
+
+            <button mat-button class="save" (click)="addOrder()">Save</button>
+        </form>
+    </div>
+</div> -->
+
+<!-- <div class="lastCont"> -->
+
+
+<div flex fxLayout='row' fxLayout.lt-sm="column">
+    <!-- <form [formGroup]="createOrderFormGroup"> -->
+    <div fxFlex.lg="50%" class="newOrderCls">
+        <img src="assets/images/Group.png" class="logoCls">
+        <div class="orderTit">
+            <h2 class="new-order">New Order</h2>
+            <br />
+            <hr class="new4" />
+            <br />
+            <mat-label class="employee-information">Employee Information</mat-label>
+
+            <div class="formInput-Labels">
+                <mat-label class="email-address"> CODE</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput (keyup)="getemployeeData($event.target.value)" maxlength="5" placeholder="code"
+                        [(ngModel)]='employeeCodeValue'>
+                    <!-- formControlName="code" -->
+                </mat-form-field>
+                <span class="errorMessage" *ngIf="displayErrorMsg">This Code is not valid maybe it's expired or you
+                    entered a
+                    wrong code</span>
+
+                <mat-label class="email-address"> STAFF ID</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput [(ngModel)]='userModel.employeeStaffId' placeholder="Staff ID">
+                    <!-- formControlName="staffId" -->
+                </mat-form-field>
+
+                <mat-label class="email-address"> EMAIL ADDRESS</mat-label>
+                <mat-form-field appearance="outline">
+                    <input matInput [(ngModel)]='userModel.employeeEmail' name="email" placeholder="Email Address">
+                    <!-- formControlName="email" -->
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+    <div fxFlex.lg="50%" class="orderInformationCls">
+        <form [formGroup]="createOrderFormGroup">
+            <div class="orderTit">
+                <mat-label class="employee-information">Order Information</mat-label>
+                <div class="formInput-Labels">
+                    <mat-label class="email-address"> ITEM CATEGORY</mat-label>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Request For</mat-label>
+                        <mat-select placeholder="Select Category" formControlName="category"
+                            (selectionChange)="onCategorySelection($event.value)">
+                            <mat-option *ngFor="let item of menuCategories" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-label class="email-address"> ITEM NAME</mat-label>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Request For</mat-label>
+                        <!-- [(ngModel)]="orderModel.item"  -->
+                        <mat-select placeholder="Select an item" formControlName="item"
+                            (selectionChange)="onItemSelection()">
+                            <mat-option *ngFor="let item of menuItems" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <br />
+                    <hr class="new4" />
+                    <br />
+
+                </div>
+
+                <div class="formInput-prices" flex fxLayout='column'>
+                    <div class="allowanceSubtract">
+                        <mat-label class="sub-total"> Sub Total</mat-label>
+                        <mat-label class="sub-total" *ngIf="displayPrice"> 47 L.E</mat-label>
+                    </div>
+                    <div class="allowanceSubtract rect">
+                        <mat-checkbox class="example-margin" formControlName="isAllowance"
+                            (change)="onChangeAllowance($event)" [disabled]="userModel.employeeStaffId==26782">
+                            Use Allowance</mat-checkbox>
+                        <mat-label class="sub-total"> -7 L.E</mat-label>
+                    </div>
+                    <div class="allowanceSubtract">
+                        <mat-label class="total-copy-3 "> Total</mat-label>
+                        <mat-label class="sub-total boldLabl" *ngIf="useAllowance"> {{totalPrice}} L.E</mat-label>
+                    </div>
+                </div>
+                <div fxLayoutGap="30px" flex fxLayout='row' fxLayout.lt-xm="row" fxLayoutAlign="end">
+                    <button mat-button class="close">Cancel Order</button>
+                    <button mat-button class="save" (click)="addOrder()"> Submit Order</button>
+                </div>
+                <!-- <button mat-button class="save" (click)="addOrder()">Save</button> -->
+            </div>
+
+
+        </form>
+    </div>
+    <!-- </form> -->
+</div>
